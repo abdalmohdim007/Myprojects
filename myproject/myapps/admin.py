@@ -15,6 +15,8 @@ class TemplateAdmin(admin.ModelAdmin):
   list_display = ('name', 'project_name')  
 
 
+
+
 admin.site.register(Project, ProjectAdmin)
 admin.site.register(Task, TaskAdmin)
 admin.site.register(Contact, ContactAdmin)

@@ -3,8 +3,8 @@ from . import views
 from django.contrib.auth.decorators import login_required
 
 urlpatterns = [ 
-path('', views.ProjectListView.as_view(), name=''),
-path('project/', views.ProjectListView.as_view(), name=''),
+path('', login_required(views.ProjectListView.as_view()), name='project-list'),
+path('project/', views.ProjectListView.as_view(), name='project'),
 path('project/create/', views.ProjectCreateView.as_view(), name='project_create'),
 path('project/<int:pk>/update/', views.ProjectUpdateView.as_view(), name='projrct_update'),
 path('project/<int:pk>/delete/', views.ProjectDeleteView.as_view(), name='project_delete'),

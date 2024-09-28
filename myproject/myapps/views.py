@@ -7,7 +7,6 @@ from django.conf import settings
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 
-@login_required
 def send_mail_page(request):
     context = {}
     
@@ -30,7 +29,7 @@ def send_mail_page(request):
 
 
 
-class ProjectListView(ListView,LoginRequiredMixin):
+class ProjectListView(LoginRequiredMixin, ListView): 
     model = Project
     template_name = 'myapps/project_list.html'  
     
