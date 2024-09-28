@@ -43,7 +43,7 @@ class ProjectCreateView(CreateView):
 class ProjectUpdateView(UpdateView):
     model = Project
     form_class = ProjectForm  
-    template_name = 'myapps/project_update.html'  
+    #template_name = 'myapps/project_update.html'  
     success_url = "thankyoupk"  
 
 class ProjectDeleteView(DeleteView):
